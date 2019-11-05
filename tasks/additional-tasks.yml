@@ -1,0 +1,17 @@
+---
+# Title: app-greenshot
+#
+# Author: Luc Rutten
+# File: defaults/additional-tasks.yml
+#
+# Description:
+#   Section for additional tasks
+#
+
+- name: "Transfer templates to host"
+  win_template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items:
+    - { src: "Greenshot.ini.j2", dest: "C:/Program Files/Greenshot/Greenshot.ini"}
+
