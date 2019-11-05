@@ -36,7 +36,20 @@ This is an example how to use the role with custom variable(s):
 
       vars:
         # -- custom settings - app-greenshot --
-        pkg_arguments: 'IACCEPTMSOLEDBSQLLICENSETERMS=YES ADDLOCAL=ALL'
+        pkg_repository_type: 'private'
+
+      roles:
+        - app-greenshot
+        
+        
+This is an example how to use the role to uninstall the application:
+
+    - hosts: windows_computers
+      become: true
+
+      vars:
+        # -- custom settings - app-greenshot --
+        pkg_state: 'absent'
 
       roles:
         - app-greenshot
