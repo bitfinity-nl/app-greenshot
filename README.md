@@ -3,7 +3,11 @@ Greenshot is a light-weight screenshot software tool for Windows.
 
 Howto
 ----------------
-This role is designed for a controlled environment (e.g. RDS / VDI) with an own (internal)webserver for hosting packages.  
+Use the "public" option for using the public repository (Default).
+
+Use the "private" option for your private repository. This option is designed for a 
+controlled environment (e.g. RDS / VDI) with an own (internal)webserver for hosting 
+packages and more granular configurations.  
 
 1. Add variable {{ def_ans_repo }} to your group_vars or change it in your playbook or role.
 2. Zip all files in 1 file.
